@@ -35,8 +35,7 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # 8. Comandos finales de optimización de Laravel
 RUN php artisan config:cache && \
     php artisan route:cache && \
-    php artisan view:cache && \
-    php artisan migrate --force
+    php artisan view:cache 
 
 # El puerto 80 ya viene expuesto por defecto en esta imagen
 EXPOSE 80
